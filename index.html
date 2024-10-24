@@ -7,19 +7,18 @@
     <body>
      <h1>Strona</h1>
         <script>
-             document.write('<h1>Hello World!</h1>')
+        document.write('<h1>Hello World!</h1>')
 
-
-             const liczba1 = parseInt(prompt('<p>Wprowadź drugą liczbę: </p>'))
-             const liczba2 = parseInt(prompt('<p>Wprowadź drugą liczbę: </p>'))
-
-            if (isNaN(liczba1)) {
-                document.write('<p>Wpisz poprawnie pierwszą liczbę </p>')
-            }else if (isNaN(liczba2)) {
-                document.write('<p>Wpisz poprawnie drugą liczbę </p>')
-            } else {
-                document.write('<p>Wynik: ' + (liczba1 + liczba2) + '</p>')
-            }
+        const liczba1 = parseInt(prompt('<p>Wprowadź drugą liczbę: </p>'))
+        const liczba2 = parseInt(prompt('<p>Wprowadź drugą liczbę: </p>'))
+        
+        if (isNaN(liczba1)) {
+            document.write('<p>Wpisz poprawnie pierwszą liczbę </p>')
+        } else if (isNaN(liczba2)) {
+            document.write('<p>Wpisz poprawnie drugą liczbę </p>')
+        } else {
+            document.write('<p>Wynik: ' + (liczba1 + liczba2) + '</p>')
+        }
         </script>
     </body>
 </html>
