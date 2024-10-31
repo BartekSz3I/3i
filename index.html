@@ -5,15 +5,16 @@
         <title>Poczatki JS</title>
     </head>
     <body>
-
-       <h1><a src="kalkulator.html">"kalkulator</a></h1>
+        <h1><a href='kalkulator.html'>"kalkulator"</a></h1>
      <h1>Strona</h1>
         <script>
         document.write('<h1>Hello World!</h1>')
-
         var liczba1 = parseInt(prompt('Wprowadź drugą liczbę: '))
         var liczba2 = parseInt(prompt('Wprowadź drugą liczbę: '))
         
+        while (isNaN(liczba1)) {
+            var liczba1 = parseInt(prompt('Wprowadź pierwszą liczbę: '))
+        }
         if (isNaN(liczba1)) {
             document.write('<p>Wpisz poprawnie pierwszą liczbę </p>')
         } else if (isNaN(liczba2)) {
