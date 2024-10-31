@@ -16,7 +16,9 @@
             var liczba1 = parseInt(prompt('Wprowadź pierwszą liczbę: '))
         }
         if (isNaN(liczba1)) {
-            document.write('<p>Wpisz poprawnie pierwszą liczbę </p>')
+            while (isNaN(liczba1)) {
+            var liczba1 = parseInt(prompt('Wprowadź pierwszą liczbę: '))
+        }
         } else if (isNaN(liczba2)) {
             document.write('<p>Wpisz poprawnie drugą liczbę </p>')
         } else {
