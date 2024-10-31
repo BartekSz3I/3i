@@ -11,7 +11,32 @@
 <body>
     
     <script>
+        var num1 = a
+        var num2 = b
+        var znak = c
 
+        while (isNaN(num1)) {
+            var num1 = parseInt(prompt('Wprowadź pierwszą LICZBĘ: '))
+        }
+
+        while (isNaN(num2)) {
+            var num2 = parseInt(prompt('Wprowadź drugą LICZBĘ: '))
+        }
+        var znak = prompt('Wpisz znak działania które chcesz wykonać')
+            if (znak == +) {
+                document.write('Wynik dodawania to: ', num1 + num2)
+            }
+            else if (znak == -) {
+                document.write('Wynik odejmowania to: ', num1 - num2)
+            }
+            else if (znak == *) {
+                document.write('Wynik mnożenia to: ', num1 * num2)
+            }
+            else if (znak == /) {
+                if (num2 == 0) {document.write('Nie można dzielić przez 0')}
+                else {document.write('Wynik dzielenia to to: ', num1 / num2)}
+            }
+            else { document.write('nie ma takiego działania')}
         
     </script>
 </body>
