@@ -11,14 +11,14 @@
 <body>
     
     <script>
-        var num1 = parseInt(prompt('Wprowadź pierwszą liczbę: '))
-        var num2 = parseInt(prompt('Wprowadź drugą liczbę: '))
-        var znak = prompt('Wpisz znak działania które chcesz wykonać')
+        const num1 = parseInt(prompt('Wprowadź pierwszą liczbę: '))
+        const num2 = parseInt(prompt('Wprowadź drugą liczbę: '))
+        const znak = prompt('Wpisz znak działania które chcesz wykonać')
 
         while (isNaN(num1)) {
-            var num1 = parseInt(prompt('Wprowadź pierwszą LICZBĘ: '))
+            const num1 = parseInt(prompt('Wprowadź pierwszą LICZBĘ: '))
         }   while (isNaN(num2)) {
-            var num2 = parseInt(prompt('Wprowadź drugą LICZBĘ: '))
+            const num2 = parseInt(prompt('Wprowadź drugą LICZBĘ: '))
         }
             if (znak == +) {
                 document.write('Wynik dodawania to: ', num1 + num2)
