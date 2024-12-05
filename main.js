@@ -237,12 +237,28 @@ h2.classList.contains("title");
 // II. ------------------- MODYFIKOWANIE ELEMENTÓW NA STRONIE INTERNETOWEJ ---------------
 // Mam dużo metod i właściwości, które umożliwiają mi modyfikację, tego co widze na stronie internetowej
 
+const firstLi = document.querySelector('li:first-child'); //1. pobieranie elementu
 
+// 1. text content
+firstLi.textContent = "Nierodka wita na JS'ie"
 
+//możemy modyfikowac zawartosc elementow przez przypisywanie nowych wlasciwosci za pomoca: textContent lub innerHTML. Stara wartosc jest usuwana
 
+//2. innerHTML
+//uzywam go jezeli chce umiescic html
+const firstLi1 = document.querySelector("li:first-child")
+//1. pobieranie elementu
+firstLi1.innerHTML = '<strong>Pogrubienie</strong> i normalnie'//2.modyfikacja
 
-
-
+//3. STYLE
+//Dodawanie styli do elementu(liniowo)
+//Mamy tu wpływ na css
+// JS - nie pozwala nam jak w CSS nadpisywac font-size, zatem uzywamy notacji wielbladziej (camel case) np. fontSize
+//np. firstLi.style.color
+const firstLi = document.querySelector('li:first-child');//1.pobieranie elementu
+firstLi.style.fontSize = '30px';
+firstLi.style.backgroundColor = "#ccc";
+firstLi.style.letterSpacing = "12px";
 
 
 // III. ---------------- ZDARZENIA AKCJE NASŁUCHIWANIE -----------------------------
