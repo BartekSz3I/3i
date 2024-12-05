@@ -260,6 +260,25 @@ firstLi.style.fontSize = '30px';
 firstLi.style.backgroundColor = "#ccc";
 firstLi.style.letterSpacing = "12px";
 
+//4 CLASS
+//dodawanie (add) klas
+//odejmowanie (remove) klas
+//przelaczanie (tooggle) klas
+firstLi.classList.contains("space")
+
+//1. Metoda toggle
+//Jesli dana klasa jest to ja zabierze jesli nie ma to ja doda
+firstLi.classList.toggle("space")
+
+//2. Add()
+firstLi.classList.add("space")
+
+//3. Remove() - jesli dana klasa jest to ja usuwa a jak jej nie ma to nic nie robi
+firstLi.classList.remove("space")
+
+//4. className - za pomoca niej mozna dostac sie do klasy w przeciwienstwie do classList.add nadpisuje nam zawartosc. 
+//Nie wazne jest wazne czy wczesniej byly klasy czy nie ona nam doda
+
 
 // III. ---------------- ZDARZENIA AKCJE NASŁUCHIWANIE -----------------------------
 // Mozemy nasłuchiwać, wyczekiwać na jakieś zdarzenie, czyli jak wystąpi zdarzenie
