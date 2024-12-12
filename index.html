@@ -13,10 +13,10 @@
         var liczba2 = parseInt(prompt('Wprowadź drugą liczbę: '))
         
         while (isNaN(liczba1)) {
-            var liczba1 = parseInt(prompt('Wprowadź pierwszą liczbę: '))
-        }
-        if (isNaN(liczba1)) {
-            while (isNaN(liczba1)) {
+            var liczba1 = parseInt(prompt('Wprowadź pierwszą liczbę: ')) // ALGORYTM SORTUJACY (KORZYSTANIE Z FUNKCJI WBUDOWANEJ)
+        }                                                                // const tablica = [5, 2, 8, 1, 9];
+        if (isNaN(liczba1)) {                                            // tablica.sort((a, b) => a - b);
+            while (isNaN(liczba1)) {                                     // console.log(tablica); // [1, 2, 5, 8, 9] 
             var liczba1 = parseInt(prompt('Wprowadź pierwszą liczbę: '))
         }
         } else if (isNaN(liczba2)) {
@@ -24,6 +24,36 @@
         } else {
             document.write('Wynik: ' + (liczba1 + liczba2) )
         }
+        /*// Tworzymy tablicę
+let tablica = [];
+
+// Funkcja dodająca element do tablicy
+function dodajElement() {
+  // Pobieramy wartość z prompt()
+  let wartosc = prompt("Wprowadź wartość do dodania do tablicy:");
+
+  // Sprawdzamy, czy wartość nie jest pusta
+  if (wartosc !== null && wartosc !== "") {
+    // Dodajemy wartość do tablicy
+    tablica.push(wartosc);
+
+    // Wyświetlamy tablicę
+    console.log("Tablica:");
+    console.log(tablica);
+
+    // Pytamy, czy użytkownik chce dodać kolejny element
+    let odpowiedz = prompt("Czy chcesz dodać kolejny element? (tak/nie)");
+    if (odpowiedz.toLowerCase() === "tak") {
+      dodajElement();
+    }
+  } else {
+    console.log("Nie wprowadzono wartości.");
+  }
+}
+
+// Wywołujemy funkcję dodającą element do tablicy
+dodajElement();
+*/
         </script>
         <h1><a href="kalkulator.html">Kalkulator</h1>
         <h1><a href="prosta_aplikacja.html">Aplikacja do zabawy stringami</h1>
