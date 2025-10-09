@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losowanie elementów z tablicy</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Losowanie elementów z tablicy
+        </h1>
+        <main>
+            <article >
+                <label for="nazwisko">Wprowadź nazwisko:</label>
+                <input type="text" name="nazwisko" id="nazwisko">
+                <br>
+                <button id="DodajOsobe">Dodaj osobę</button>
+                <button id="Losowanie">Losowanie</button>
+                <br>
+                <p class="WprowadzanieNazwisk">
+                    Dodaj kolejną osobę lub przejdź do losowania
+                </p>
+            </article>
+            <article> 
+                <h2>
+                    Tablica z nazwiskami:
+                </h2>
+                <p  class="TablicaNazwisk">
+
+                </p>
+            </article>
+            <label for="LiczbaOsob">Ile osób wylosować?</label>
+            <input type="number" name="LiczbaOsob" id="LiczbaOsob">
+            <button id="Zatwierdz">Zatwierdź</button>
+
+            <article>
+                <h2>AktualnaTablica</h2>
+                <p class="AktualnaTablica">
+
+                </p>
+            </article>
+            <article>
+                <button id="Losuj">Losuj</button>
+                <br>
+                <h2>Wylosowane osoby:</h2>
+                <ol>
+
+                </ol>
+                <p class="WylosowaneOsoby">
+
+                </p>
+            </article>
+        </main>
+    </div>
+    <script>
+        const WprowadzanieNazwisk = document.querySelector('.WprowadzanieNazwisk');
+
+        let DodajNazwisko = document.getElementById('nazwisko');
+
+        const PrzyciskDodajOsobe = document.getElementById('DodajOsobe');
+
+        const PrzyciskLosowanie = document.getElementById('Losowanie');
+        
+        const TablicaNazwisk = document.querySelector('.TablicaNazwisk');
+
+        const AktualnaTablica = document.querySelector('.AktualnaTablica');
+        
+        let LiczbaOsob = document.getElementById('LiczbaOsob');
+
+        const PrzyciskZatwierdz = document.getElementById('Zatwierdz');
+
+        const Article_Wylosowane_Osoby = document.querySelector('.WylosowaneOsoby')
+
+        const PrzyciskLosuj = document.getElementById('Losuj');
+
+        const ListaWylosowanychOsob = document.querySelector('ol');
+
+        let tempTablica = [];
+
+        let WylosowaneOsoby = [];
+
+        const names = [
+        	'Kowal',
+        	'Lis',
+        	'Nowak',
+        	'Nowakowski',
+        	'Iksiński',
+        	'Milewski',
+        	'Kamińska',
+        	'Lasik',
+        	'Burzyński',
+        	'Nowankowski',
+        	'Woźnicka',
+        ];
+
+        PrzyciskDodajOsobe.addEventListener('click', function(){
+            names.push(DodajNazwisko.value);
+            TablicaNazwisk.innerHTML = names;
+        });
+
+        PrzyciskLosowanie.addEventListener('click', function(){
+            tempTablica = names.map(function (elem){
+                return elem;
+            });
+
+            WprowadzanieNazwisk.innerHTML = `lista osób zawiera ${tempTablica.length}`;
+
+            AktualnaTablica.innerHTML = tempTablica;
+        });
+        
+        PrzyciskZatwierdz.addEventListener('click', function(){
+            let IleOsob = LiczbaOsob.value;
+            for (i = 1; i <= IleOsob; i++) {
+                let WylosowanaOsoba = tempTablica[Math.floor(Math.random() * tempTablica.length)];
+                WylosowaneOsoby.push(WylosowanaOsoba);
+
+                tempTablica = tempTablica.filter(elem => WylosowanaOsoba);
+            }
+
+            let j = 0;
+            
+            if (j < WylosowaneOsoby.length) {
+                PrzyciskLosuj.addEventListener('click', function(){
+                    ListaWylosowanychOsob.innerHTML += `<li>${WylosowaneOsoby[j]}</li>`;
+                j++
+            });
+            } else {
+                Article_Wylosowane_Osoby.innerHTML = 'Brak nazwisk do wylosowania';
+            }
+            
+        });
+
+        TablicaNazwisk.innerHTML = names;
+    </script>
+</body>
+</html>
