@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap - cwiczenie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container shadow p-3 ml-3 mr-3">
+        <header class="row m-0 shadow mb-5 mt-2 p-3">
+            <h1 class="col-6 text-center text-success">
+                Bootstrap
+            </h1>
+            <nav class="navbar navbar-expand-lg  col-6">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="row">
+
+            <main class="col-8 row p-1 m-0">
+            
+
+                <div id="carouselExample" class="carousel slide mb-3 w-100 p-0">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/id/18/310/100" class="d-block w-100" alt="zdjecie">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/id/15/310/100" class="d-block w-100" alt="zdjecie">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/id/10/310/100" class="d-block w-100" alt="zdjecie">
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <table class="table table-success table-striped shadow mb-5">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">3</th>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>@social</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                
+                <form class="shadow">
+                    <h5 class="text-success text-center">
+                        Napisz do nas
+                    </h3>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-around pt-2 pb-2 mb-2">
+
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                            <label class="form-check-label" for="switchCheckDefault">Checkbox input 1</label>
+                        </div>
+
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                            <label class="form-check-label" for="switchCheckDefault">Checkbox input 2</label>
+                        </div>
+
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                            <label class="form-check-label" for="switchCheckDefault">Checkbox input 3</label>
+                        </div>
+
+                    </div>
+
+                </form>
+  
+
+            </main>
+
+            <aside class="col-4 row">
+
+                
+                <div class="card m-3 p-1" style="width: 26rem;">
+                    <img src="https://picsum.photos/100/50" class="card-img-top" alt="zdjcie do karty">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-success">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-outline-success">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card m-3 p-1" style="width: 26rem;">
+                    <img src="https://picsum.photos/100/50" class="card-img-top" alt="zdjcie do karty">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-success">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-outline-success">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+  
+
+            </aside>
+
+        </div>
+
+        <footer class="border-top mt-4 m-2 p-2 pt-4 text-success d-flex justify-content-center align-items-center">
+            <p class="m-0 p-0">
+                &copy; me XXI c.
+            </p>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
